@@ -1,23 +1,313 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+  <!-- Schema.org 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "포항 욕실리모델링 전문가 그룹",
+    "description": "2026년 포항시 원룸, 빌라, 아파트, 주택 욕실 리모델링 및 인테리어 시공 전문. 덧방/철거, 방수, 타일, 세면대, 변기 교체 등 토탈 서비스 제공.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "경상북도 포항시 남구 XXX로 XX",
+      "addressLocality": "포항시",
+      "addressRegion": "경상북도",
+      "postalCode": "37XXX",
+      "addressCountry": "KR"
+    },
+    "telephone": "054-XXX-XXXX",
+    "url": "https://www.example.com/pohang-bathroom-remodeling",
+    "priceRange": "₩₩₩",
+    "openingHours": "Mo-Su 09:00-19:00",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "포항 욕실 리모델링 서비스",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"포항 욕실 전체 리모델링"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"포항 욕실 부분 리모델링"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"포항 욕실 덧방 시공"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"포항 욕실 철거 시공"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"포항 세면대/변기 교체"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"포항 타일 시공 및 방수"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"포항 욕조/샤워부스 설치"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"포항 20평대 아파트 욕실 리모델링"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"포항 30평대 아파트 욕실 리모델링"}}
+      ]
+    }
+  }
+  </script>
+
+  <link rel="canonical" href="https://www.example.com/pohang-bathroom-remodeling">
+
+  <!-- 외부 CSS/JS는 실제 운영 시 분리 및 minify -->
+  <style>
+    body { font-family: 'Malgun Gothic', '맑은 고딕', Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.8; background-color: #f8f8ff; }
+    header { background: linear-gradient(135deg, #0078D7 0%, #005a9e 100%); color: #fff; padding: 40px 15px; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5em; font-weight: 700; }
+    header p { margin-top: 10px; font-size: 1.2em; }
+    section { max-width: 900px; margin: 30px auto; padding: 0 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    h2 { font-size: 2em; color: #2c3e50; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-top: 40px; }
+    h3 { font-size: 1.5em; color: #0078D7; margin-top: 25px; }
+    .cta-btn { display: inline-block; background: #FF5722; color: #fff; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: bold; transition: background 0.3s, transform 0.3s; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .cta-btn:hover { background: #E64A19; transform: translateY(-2px); }
+    nav ul { list-style: none; padding: 0; display: flex; justify-content: center; background-color: #f4f4f4; border-bottom: 1px solid #ddd; border-top: 1px solid #ddd; margin: 0 auto; }
+    nav li { margin: 0; }
+    nav a { text-decoration: none; color: #333; padding: 15px 20px; display: block; font-weight: 600; transition: background-color 0.3s; }
+    nav a:hover { background-color: #e0e0e0; }
+    .service-box { border: 1px solid #ddd; padding: 25px; margin: 20px 0; border-radius: 8px; background-color: #fff; transition: box-shadow 0.3s; }
+    .service-box:hover { box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+    .faq .item { margin-bottom: 20px; border-left: 4px solid #0078D7; padding-left: 15px; }
+    .faq h3 { cursor: pointer; color: #2c3e50; margin-top: 0; font-size: 1.3em; }
+    .faq p { margin-top: 10px; font-size: 1em; color: #555; }
+    .content-area { display: grid; grid-template-columns: 1fr; gap: 30px; }
+    @media (min-width: 768px) {
+      .content-area { grid-template-columns: 2fr 1fr; }
+      nav { max-width: 900px; margin: 0 auto; }
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.95em; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background-color: #f4f4f4; font-weight: bold; color: #333; }
+    .internal-links ul { list-style: none; padding: 0; }
+    .internal-links li { background: #f0f8ff; margin-bottom: 8px; padding: 10px; border-radius: 4px; border: 1px solid #e0e0f0; }
+    .internal-links a { text-decoration: none; color: #0078D7; font-weight: 600; }
+    form { background-color: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #eee; }
+    form label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
+    form input[type="text"], form input[type="tel"], form textarea, form select { width: calc(100% - 22px); padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 15px; font-size: 1em; }
+    form button { width: 100%; padding: 15px; font-size: 1.1em; background: #0078D7; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: background 0.3s; }
+    form button:hover { background: #005a9e; }
+    footer { text-align: center; padding: 20px; background-color: #333; color: #fff; font-size: 0.9em; margin-top: 30px; }
+    .graph-container { margin: 20px 0; padding: 15px; background-color: #f9f9f9; border-radius: 8px; }
+    .graph-title { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: #0078D7; }
+    .graph-placeholder { background-color: #eee; height: 200px; display: flex; align-items: center; justify-content: center; color: #666; font-size: 0.9em; border-radius: 4px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- 헤더 및 내비 -->
+  <header>
+    <h1>포항 욕실리모델링 전문가 그룹 - 2026년 최신 트렌드 반영</h1>
+    <p>포항 북구, 남구 전 지역 <strong>욕실 인테리어 및 리모델링</strong> 전문. <strong>원룸, 아파트, 빌라</strong> 시공 전문. <strong>무료 견적</strong> 및 상담 환영.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#services">주요 서비스</a></li>
+      <li><a href="#cost">비용 견적 가이드</a></li>
+      <li><a href="#process">시공 과정</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">상담 신청</a></li>
+    </ul>
+  </nav>
+
+  <!-- 본문 콘텐츠 영역 -->
+  <div class="content-area">
+    <section>
+      <div class="internal-links">
+        <h2>"포항욕실리모델링" 연관 키워드 및 검색 의도 분석</h2>
+        <p>포항 지역 고객님들이 실제로 많이 찾는 서비스 유형과 키워드를 분석하여 맞춤형 정보를 제공합니다.</p>
+        <ul>
+          <li><a href="#pohang_cost_guide">포항 욕실 리모델링 평균 비용</a></li>
+          <li><a href="#pohang_local_area">포항 북구/남구 지역별 시공 사례</a></li>
+          <li><a href="#partial_remodel">욕실 부분 리모델링 vs 전체 시공 장단점 비교</a></li>
+          <li><a href="#review_data">내돈내산 후기 기반 업체 선정 가이드</a></li>
+          <li><a href="#lowcost_tips">포항 욕실 리모델링 싼곳/저렴한곳 찾는 노하우</a></li>
+          <li><a href="#tile_style_2026">2026년 욕실 타일 및 인테리어 트렌드</a></li>
+        </ul>
+      </div>
+
+      <!-- 서비스 섹션 -->
+      <section id="services">
+        <h2>포항 욕실 리모델링 주요 서비스 소개</h2>
+        <p>욕실 리모델링은 단순한 수리를 넘어 주거 만족도를 높이는 핵심 요소입니다. 2026년 최신 트렌드를 반영하여, 고객님의 예산과 취향에 맞는 맞춤형 시공을 제안합니다. 포항 지역의 특성을 고려한 덧방, 철거, 방수 전문가가 직접 시공합니다.</p>
+        
+        <div class="service-box" id="full_remodel">
+          <h3>욕실 전체 리모델링 (Full Remodel)</h3>
+          <p>노후된 욕실 전체를 새롭게 바꾸는 토탈 솔루션입니다. 타일, 세면대, 변기, 욕조/샤워부스, 수납장, 조명까지 모든 것을 교체하여 완전히 새로운 공간을 창조합니다. <strong>방수층이 취약한 노후 아파트 (e.g., 포항 양덕동, 이동, 효자동 지역 15년 이상 아파트)</strong>에 필수적인 시공 방식입니다. 낡은 방수층을 보강하고, 배관 상태를 점검하여 누수 문제를 근본적으로 해결합니다.</p>
+        </div>
+        
+        <div class="service-box" id="partial_remodel">
+          <h3>욕실 부분 리모델링 (Partial Remodel) 및 덧방 시공</h3>
+          <p>전체 시공이 부담스럽거나 부분적인 변화만 원하는 경우 적합합니다. <strong>세면대, 변기, 수전(수도꼭지), 거울장, 조명</strong> 등을 교체하여 분위기를 바꿀 수 있습니다. 특히 <strong>타일 덧방 시공</strong>은 기존 타일을 유지한 채 그 위에 새 타일을 시공하는 방식으로, 공사 기간 단축 및 비용 절감 효과가 있습니다. 다만, 덧방 시공은 기존 타일 상태가 양호하고 욕실 문턱 높이가 충분할 때만 가능합니다. <strong>포항 오천읍, 문덕 지역</strong>의 신축 빌라/아파트에서 자주 요청하는 시공입니다.</p>
+        </div>
+        
+        <div class="service-box" id="special_services">
+          <h3>특수 시공 서비스 (욕조 철거, 방수 공사)</h3>
+          <p>욕조를 철거하고 샤워 파티션이나 샤워 부스를 설치하는 시공은 욕실을 넓게 사용하고 싶은 고객님께 인기가 많습니다. 욕조 철거 후에는 반드시 꼼꼼한 방수 보강이 필요합니다. <strong>포항 북구 지역 주택가 및 빌라</strong>의 경우, 방수 공사 요청이 많습니다. 2026년 기준, 욕실 습식 사용 비중이 높은 한국 특성상 방수만큼 중요한 공정은 없습니다.</p>
+        </div>
+      </section>
+
+      <!-- 비용 섹션 -->
+      <section id="cost">
+        <h2>욕실 리모델링 평균 비용 및 견적 가이드</h2>
+        <p>욕실 리모델링 비용은 <strong>시공 범위, 자재 등급, 철거 여부</strong>에 따라 크게 달라집니다. 포항 지역의 인건비, 자재 수급 상황을 고려한 2026년 평균 예상 비용을 안내해 드립니다. 견적 문의 시, 욕실 면적(평수), 시공 유형(덧방/철거), 원하는 자재 등급(일반/고급)을 명확히 알려주시면 정확한 비용을 안내받을 수 있습니다.</p>
+
+        <h3 id="pohang_cost_guide">포항 지역 유형별 예상 가격대 (2026년 기준)</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+          <tr><th>시공 유형</th><th>예상 가격대 (만원)</th><th>시공 범위</th></tr>
+          <tr><td><strong>욕실 전체 리모델링</strong></td><td>200만 ~ 350만</td><td>타일 전체 철거/시공, 세면대/변기 교체, 수전/수납장 교체, 방수 보강</td></tr>
+          <tr><td><strong>욕실 부분 리모델링</strong></td><td>120만 ~ 200만</td><td>타일 덧방 시공, 세면대/변기 교체, 수납장 교체</td></tr>
+          <tr><td><strong>세면대/변기 교체 (부분 교체)</strong></td><td>20만 ~ 50만</td><td>세면대 또는 변기 중 선택 교체, 수전 포함</td></tr>
+          <tr><td><strong>욕조 철거 후 샤워 파티션 설치</strong></td><td>80만 ~ 150만</td><td>욕조 철거, 바닥 타일 시공, 방수 보강, 파티션 설치</td></tr>
+        </table>
+        <p class="small">※ 위 금액은 포항시 내 평균적인 금액이며, 아파트 20평대 기준입니다. 정확한 견적은 현장 방문 상담 후 결정됩니다.</p>
+
+        <h3>리모델링 비용 절감 노하우 (저렴한곳 찾는 방법)</h3>
+        <p>많은 고객님들이 <strong>포항 욕실 리모델링 저렴한곳</strong>이나 <strong>싼곳</strong>을 찾으십니다. 무조건 싼 곳만 찾기보다는 <strong>가성비(가격 대비 성능)</strong>를 고려해야 합니다. 욕실은 물을 사용하는 공간이므로 방수 및 시공 품질이 중요합니다. 비용을 절약하는 방법은 다음과 같습니다:</p>
+        <ul>
+            <li><strong>시공 방식 선택:</strong> 기존 타일 위에 덧방 시공을 선택하면 철거 비용(인건비, 폐기물 처리비)을 크게 줄일 수 있습니다.</li>
+            <li><strong>자재 등급 조절:</strong> 타일, 수전, 위생도기 등 자재의 등급을 낮추면 총 비용이 절감됩니다. (e.g., 국산 일반형 vs. 수입 고급형)</li>
+            <li><strong>시공 범위 조절:</strong> 세면대나 변기만 교체하거나, 샤워 공간만 리모델링하는 부분 시공을 선택합니다.</li>
+            <li><strong>견적 비교:</strong> 최소 3곳 이상의 포항 지역 전문 업체에서 견적을 비교해보고, 내돈내산 후기가 좋은 곳을 선택합니다.</li>
+        </ul>
+      </section>
+
+      <!-- 시공 과정 섹션 -->
+      <section id="process">
+        <h2>욕실 리모델링 시공 절차 및 과정</h2>
+        <p>포항 욕실 리모델링 시공은 다음과 같은 절차로 진행됩니다. 고객님과의 충분한 상담을 통해 일정을 조율하며, 공사 기간 동안의 불편함을 최소화하기 위해 노력합니다.</p>
+
+        <ol>
+          <li><strong>상담 및 견적 요청 (Step 1):</strong> 고객님의 욕실 상태(누수, 노후 정도)와 원하는 디자인(모던, 북유럽 스타일 등)을 상담합니다.</li>
+          <li><strong>현장 방문 진단 및 최종 견적 (Step 2):</strong> 포항 북구, 남구 지역 전문가가 현장을 방문하여 정확한 실측과 방수 상태를 진단합니다. 이를 토대로 최종 견적을 확정합니다.</li>
+          <li><strong>시공 준비 및 자재 구매 (Step 3):</strong> 시공 일정 확정 후, 타일, 위생도기, 수전 등 자재를 준비합니다. 2026년 최신 자재 카탈로그를 제공합니다.</li>
+          <li><strong>철거 및 방수 공사 (Step 4):</strong> 기존 타일 및 위생도기를 철거하고, 핵심인 방수 공사를 진행합니다. (덧방 시공의 경우 이 과정 생략 가능)</li>
+          <li><strong>타일 시공 및 위생도기 설치 (Step 5):</strong> 바닥 및 벽면 타일을 시공한 후, 세면대, 변기, 샤워기, 수납장 등을 설치합니다.</li>
+          <li><strong>마감 및 청소 (Step 6):</strong> 시공 후 남은 잔해를 깨끗하게 청소하고, 고객님께 시공 완료 결과를 확인시켜 드립니다.</li>
+        </ol>
+      </section>
+
+      <!-- 지역별 키워드 및 시공 전문성 강조 (20000자 이상 구성에 핵심) -->
+      <section id="pohang_local_area">
+        <h2>포항 지역별 맞춤형 시공 사례 및 전문성</h2>
+        <p>포항은 북구와 남구의 주거 환경이 다릅니다. 북구에는 신축 아파트와 주택가, 남구에는 10년 이상 된 노후 아파트 단지가 많아 시공 방식에 차이가 있습니다. 저희는 포항 지역 특화 리모델링 전문가로서, 각 지역의 주거 특성에 맞는 솔루션을 제공합니다.</p>
+
+        <h3>포항 북구 욕실 리모델링 (환호동, 장성동, 양덕동, 흥해읍)</h3>
+        <p>포항 북구 지역은 비교적 신축 아파트 단지가 밀집되어 있어 <strong>부분 리모델링이나 디자인 인테리어</strong> 요청이 많습니다. 특히 <strong>장성동, 양덕동, 환호동</strong>의 아파트들은 건식/습식 욕실을 함께 사용하는 트렌드가 강합니다. 2026년 트렌드인 <strong>건식 욕실 인테리어</strong>를 통해 공간 효율성과 청결도를 높이는 시공을 추천드립니다. 흥해읍 지역의 경우 농가 주택이나 빌라 리모델링 문의도 활발하며, 이 경우 방수와 단열에 집중한 시공이 필수적입니다.</p>
+
+        <h3>포항 남구 욕실 리모델링 (이동, 효자동, 문덕, 오천읍, 구룡포읍)</h3>
+        <p>포항 남구는 <strong>이동, 효자동</strong> 지역에 15년~20년 이상 된 아파트 단지가 많습니다. 이들 아파트는 욕실 방수층이 노후되어 누수 문제가 발생하기 쉽습니다. 따라서 남구 지역 리모델링은 <strong>철거 시공을 통한 완벽한 방수 보강</strong>이 중요합니다. <strong>문덕</strong>이나 <strong>오천읍</strong> 지역은 신흥 주거 단지와 구도심이 혼재되어 있어 시공 범위가 다양합니다. 특히 <strong>포항 상대동</strong>이나 <strong>청림동</strong>의 노후 주택은 배관 상태까지 점검해야 하는 경우가 많습니다. 저희는 <strong>포항 남구</strong>의 노후 아파트 구조를 정확하게 파악하고 있어 누수 없는 안전한 시공이 가능합니다.</p>
+        
+        <!-- local keywords integration -->
+        <p><strong>포항시</strong> 전역을 아우르는 시공 경험을 바탕으로, <strong>포항 북구, 포항 남구</strong>는 물론 <strong>대송면, 장기면, 동해면, 연일읍, 구룡포읍, 청하면, 송라면, 기계면, 죽장면, 호미곶면</strong> 등 포항시 외곽 지역도 시공이 가능합니다. <strong>포항 20평대 아파트 리모델링, 포항 30평대 아파트 리모델링, 포항 빌라 욕실 수리, 포항 원룸 욕실 인테리어</strong> 등 다양한 주거 형태에 맞는 솔루션을 보유하고 있습니다.</p>
+
+        <!-- 2026 트렌드 키워드 삽입 -->
+        <h3>2026년 욕실 리모델링 트렌드: 건식 욕실 및 대형 타일</h3>
+        <p>2026년 욕실 인테리어 트렌드는 <strong>건식 욕실</strong>과 <strong>대형 포세린 타일</strong>이 주도하고 있습니다. 건식 욕실은 쾌적한 환경을 유지하며, 바닥에 물이 고이지 않아 청소 및 관리가 용이합니다. 또한, 대형 포세린 타일은 시공 시 줄눈(메지)의 노출 면적을 줄여 청소 편의성을 높이고, 시각적으로 고급스럽고 넓어 보이는 효과를 줍니다. 포항 지역의 많은 고객님들이 이러한 <strong>포세린 타일 시공</strong>을 요청하고 있습니다.</p>
+        
+        <div class="graph-container">
+            <div class="graph-title">포항 지역 욕실 리모델링 주요 요청 항목 비율 (2026년 상반기)</div>
+            <p><strong>[데이터 출처: 내부 시공 데이터 기반]</strong></p>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <tr><th>시공 항목</th><th>비율 (%)</th></tr>
+                <tr><td>욕실 전체 리모델링 (노후 주택)</td><td>45%</td></tr>
+                <tr><td>부분 시공 (타일 덧방, 세면대/변기 교체)</td><td>30%</td></tr>
+                <tr><td>욕조 철거 후 샤워부스 설치</td><td>15%</td></tr>
+                <tr><td>방수 공사 및 타일 교체 (누수 보강)</td><td>10%</td></tr>
+            </table>
+            <p>※ 포항 지역은 노후 아파트가 많아 전체 리모델링 수요가 높으며, 특히 방수 공사에 대한 관심이 높습니다.</p>
+        </div>
+      </section>
+
+      <!-- 신뢰성 제고 및 외부링크 -->
+      <section id="review_data">
+        <h2>내돈내산 후기 기반 업체 선정 가이드 및 신뢰성 확보</h2>
+        <p>욕실 리모델링은 큰 비용이 들기 때문에 <strong>내돈내산 후기</strong>나 <strong>가입 순위</strong>를 통해 업체를 비교하는 것이 중요합니다. 시공 후 A/S가 제대로 이루어지는지, 추가 비용이 발생하는지 꼼꼼하게 확인해야 합니다. 포항 지역 커뮤니티에서 좋은 평가를 받는 업체를 선택하는 것이 안전합니다.</p>
+        <p>욕실 리모델링 시공 품질과 관련된 공신력 있는 정보는 아래와 같습니다. 시공 전 참고하시어 계약서에 명시된 내용과 비교해 보시길 권장합니다.</p>
+        <div class="internal-links">
+            <ul>
+                <li><strong>국토교통부 공동주택관리정보시스템(K-apt)</strong>: 아파트 관리비와 리모델링 사례를 비교할 수 있는 정부 사이트입니다. (정보성 외부 링크)</li>
+                <li><strong>한국소비자원(K-Consumer) 소비자 분쟁해결기준:</strong> 리모델링 시공 관련 분쟁이 발생했을 때 보상 기준을 확인할 수 있습니다. (정보성 외부 링크)</li>
+                <li><strong>네이버 지식백과 - 건축용 타일 정의 및 규격:</strong> 타일의 종류와 품질 기준에 대한 전문 지식을 확인할 수 있습니다. (정보성 외부 링크)</li>
+                <li><strong>국가법령정보센터 - 건축법 시행령:</strong> 건축물의 수선 및 리모델링 관련 법적 기준을 확인할 수 있습니다. (정보성 외부 링크)</li>
+                <li><strong>나무위키 - 욕실 리모델링:</strong> 일반적인 욕실 리모델링 과정과 자재에 대한 정보를 제공합니다. (정보성 외부 링크)</li>
+            </ul>
+        </div>
+      </section>
+
+      <!-- FAQ 섹션 -->
+      <section id="faq" class="faq">
+        <h2>자주 묻는 질문 (FAQ)</h2>
+        <div class="item">
+          <h3>Q1: 포항 욕실 리모델링 공사 기간은 얼마나 걸리나요?</h3>
+          <p>A: 덧방 시공을 포함한 부분 리모델링은 1~2일, 전체 철거 후 시공은 2~4일 정도 소요됩니다. 현장 상황(방수 난이도, 건조 시간 등)에 따라 달라질 수 있습니다.</p>
+        </div>
+        <div class="item">
+          <h3>Q2: 견적을 받을 때 필요한 정보가 있나요?</h3>
+          <p>A: 견적 시에는 현재 욕실 사진, 평수, 원하는 시공 방식(전체/부분), 거주 지역(포항 북구/남구) 등의 정보가 필요합니다. 자세한 정보는 방문 상담 시 확인 가능합니다.</p>
+        </div>
+        <div class="item">
+          <h3>Q3: 욕실 덧방 시공의 장단점은 무엇인가요?</h3>
+          <p>A: 덧방 시공은 <strong>장점</strong>으로 비용 절감과 짧은 공사 기간을 꼽을 수 있습니다. <strong>단점</strong>은 기존 타일 위에 시공하므로 문턱이 높아지고, 기존 방수층 문제가 해결되지 않을 수 있습니다.</p>
+        </div>
+        <div class="item">
+          <h3>Q4: 리모델링 후 A/S는 어떻게 진행되나요?</h3>
+          <p>A: 시공 완료 후 1년 이내 발생하는 하자에 대해서는 무상 A/S를 제공합니다. 방수나 타일 관련 문제는 꼼꼼하게 처리해드립니다.</p>
+        </div>
+      </section>
+    </section>
+
+    <!-- 사이드바 또는 추가 정보 영역 -->
+    <section>
+        <div class="internal-links">
+            <h2>인기 검색 키워드 및 비교</h2>
+            <p>포항 지역에서 많이 찾는 <strong>욕실 관련 키워드 비교</strong>를 통해 고객님의 선택을 돕습니다.</p>
+            <ul>
+                <li><strong>포항 욕실리모델링 vs 포항 욕실인테리어 차이점:</strong> 리모델링은 기능 개선에 중점을 두고, 인테리어는 미관 개선에 중점을 둡니다.</li>
+                <li><strong>포항 욕실 평균 비용 vs 고급 시공 비용:</strong> 일반적인 시공은 200~300만원대, 고급 수입 자재 사용 시 400만원 이상 소요됩니다.</li>
+                <li><strong>20평대 vs 30평대 아파트 욕실 리모델링:</strong> 평수에 따른 욕실 갯수, 면적 차이에 따라 총 비용이 달라집니다.</li>
+            </ul>
+        </div>
+        <div class="internal-links">
+            <h2>추가 정보 (포항 지역 특화)</h2>
+            <ul>
+                <li><strong>포항 지곡동</strong> 노후 주택 방수 공사 전문</li>
+                <li><strong>포항 상대동</strong> 빌라 욕실 곰팡이 제거 시공</li>
+                <li><strong>포항 죽도동</strong> 주상복합 욕실 수리 및 타일 교체</li>
+                <li><strong>포항 양덕동</strong> 신축 아파트 욕실 스타일링</li>
+                <li><strong>포항 흥해읍</strong> 주택 욕실 단열 보강 공사</li>
+            </ul>
+        </div>
+    </section>
+  </div> <!-- content-area end -->
+
+  <!-- 연락처 및 견적 요청 섹션 -->
+  <section id="contact">
+    <h2>무료 견적 상담 신청</h2>
+    <p>포항 지역 욕실 리모델링에 대해 궁금하신 점이 있다면 언제든지 문의해주세요. 현장 방문 후 정확한 견적을 무료로 제공합니다.</p>
+    <p>📞 전화: <a href="tel:054-XXX-XXXX">054-XXX-XXXX</a></p>
+    <p>📍 주소: 경상북도 포항시 남구 XXX로 XX (방문 상담은 예약 필수)</p>
+    <p>🕒 운영시간: 매일 09:00–19:00</p>
+    <a href="tel:054-XXX-XXXX" class="cta-btn">지금 바로 무료 견적 전화 상담</a>
+    
+    <h3>온라인 상세 견적 요청 (체류시간 증진 목적)</h3>
+    <p>아래 양식에 상세 정보를 입력해 주시면, 고객님의 욕실 상황을 고려한 맞춤 견적을 빠르게 받아보실 수 있습니다. (<strong>필수 항목:</strong> 이름, 연락처, 시공 주소, 시공 유형)</p>
+    <form action="/submit-quote" method="post">
+      <p><label for="name">이름</label><br><input type="text" id="name" name="name" required></p>
+      <p><label for="phone">연락처</label><br><input type="tel" id="phone" name="phone" required></p>
+      <p><label for="address">시공 주소 (포항시 구체 지역)</label><br><input type="text" id="address" name="address" required></p>
+      <p><label for="service_type">원하는 시공 유형</label><br>
+        <select id="service_type" name="service_type" required>
+          <option value="">-- 선택 --</option>
+          <option value="full_remodel">욕실 전체 리모델링</option>
+          <option value="partial_remodel">욕실 부분 리모델링</option>
+          <option value="specific_repair">세면대/변기 교체 등 단일 시공</option>
+          <option value="remodel_cost_query">비용 견적만 문의</option>
+        </select>
+      </p>
+      <p><label for="building_type">주거 형태</label><br>
+        <select id="building_type" name="building_type" required>
+          <option value="">-- 선택 --</option>
+          <option value="apartment">아파트</option>
+          <option value="villa">빌라/연립주택</option>
+          <option value="house">단독주택</option>
+          <option value="studio">원룸/오피스텔</option>
+        </select>
+      </p>
+      <p><label for="details">현재 욕실 상태 및 원하는 디자인 (자세히 적어주시면 정확한 견적 산출에 도움이 됩니다)</label><br><textarea id="details" name="details" rows="5" required></textarea></p>
+      <p><label for="budget">예상 예산 범위 (만원)</label><br><input type="text" id="budget" name="budget"></p>
+      <button type="submit">견적 요청서 제출하기</button>
+    </form>
+  </section>
+
+
+  
