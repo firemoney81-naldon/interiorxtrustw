@@ -14,8 +14,10 @@
 <meta name="twitter:title" content="포항욕실리모델링"/>
 <meta name="twitter:url" content="/"/>
 <meta name="twitter:image" content="https://financial.pstatic.net/insurance/insurance_car.png"/>
+<meta name="google-site-verification" content="Ch1yWk0osDMWz04XNTZ04nhF8jCo1Td789Q2Swikg_U" />
+<meta name="naver-site-verification" content="0a9ca3b122a87df79538dd15ae72171a8c59363d" />
 
-
+	
 <meta name="subject" content="포항욕실리모델링" />
 <meta name="publisher" content="포항욕실리모델링" />
 <meta name="Other Agent" content="포항욕실리모델링" />
@@ -422,9 +424,9 @@
       const second = String(kstDate.getSeconds()).padStart(2, '0');
 
       // YYYY-MM-DD 형식 (footer 보여주기용)
-      const formattedDate = 포항욕실리모델링${year}-${month}-${day}포항욕실리모델링;
+      const formattedDate = `${year}-${month}-${day}`;
       // ISO 8601 형식 (검색엔진이 가장 좋아하는 표준 포맷)
-      const isoDateTime = 포항욕실리모델링${year}-${month}-${day}T${hour}:${minute}:${second}+09:00포항욕실리모델링;
+      const isoDateTime = `${year}-${month}-${day}T${hour}:${minute}:${second}+09:00`;
       
       return { year, formattedDate, isoDateTime };
     }
@@ -478,7 +480,7 @@
     // 3. SEO 메타 태그 업데이트 (Naver/Google 공통)
     // ----------------------------------------------------------------------
     function setMetaTag(attrType, attrName, content) {
-      let selector = 포항욕실리모델링meta[${attrType}="${attrName}"]포항욕실리모델링;
+      let selector = `meta[${attrType}="${attrName}"]`;
       let meta = document.querySelector(selector);
       if (!meta) {
         meta = document.createElement('meta');
@@ -499,7 +501,7 @@
       setMetaTag('name', 'date', data.formattedDate);
 
       // (D) 저작권 정보 갱신 (네이버 소유 확인 시 참고)
-      setMetaTag('name', 'copyright', 포항욕실리모델링${data.year} ${document.title}포항욕실리모델링);
+      setMetaTag('name', 'copyright', `${data.year} ${document.title}`);
     }
 
     // ----------------------------------------------------------------------
@@ -537,7 +539,6 @@
     updateJsonLd(timeData);
   })();
 </script>
-
 
 
 
